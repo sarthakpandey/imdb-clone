@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/movie.css" />
+  </head>
+  <body>
+    <nav class="navbar sticky navbar-expand-lg navbar-dark bg-danger py-3">
+      <a class="navbar-brand" href="#">IMDB CLONE</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#parallax"
+            >Home <span class="sr-only">(current)</span></a
+          >
+          <a class="nav-item nav-link" href="#movies">Movies</a>
+          <a class="nav-item nav-link" href="#tv_shows">TV Shows</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid" style="padding: 0">
+      <div id="imageparallax">
+            <div class="pDiv"><div class="col-4" id="posterDiv"></div></div>
+      </div>
+
+      <div class="row m-3 mx-auto">
+
+        <div class = "col-3 mx-4"></div>
+        
+            <div class="col-sm-4">
+                    <h1 class=" " id="title"></h1>
+          
+                    <h4 class="" id="tag_line"></h4>
+                
+                    <div id = "genreDiv">
+
+                    </div>
+          
+                  </div>
+
+        <div id="vl"></div>
+
+        
+
+        <div id="overviewDiv" class = "col-sm"></div>
+
+      </div>
+
+      <div id="similar_movies" class = "p-4">
+        <div class="row m-2 mx-auto">
+          <h2 class="">Similar Movies</h2>
+        </div>
+
+        <div class="row mx-auto" id="similar_movies_large"></div>
+
+        <div class="row mx-auto mt-3" id="similar_movies_small"></div>
+      </div>
+
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/movie_script.js"></script>
+  </body>
+</html>
