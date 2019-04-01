@@ -10,7 +10,7 @@
   </head>
   <body>
     <nav class="navbar sticky navbar-expand-lg navbar-dark bg-danger py-3">
-      <a class="navbar-brand" href="#">IMDB CLONE</a>
+      <a class="navbar-brand" href="./index.html">IMDB CLONE</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -25,44 +25,33 @@
 
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="#parallax"
-            >Home <span class="sr-only">(current)</span></a
-          >
-          <a class="nav-item nav-link" href="#movies">Movies</a>
-          <a class="nav-item nav-link" href="#tv_shows">TV Shows</a>
+          <a class="nav-item nav-link active" href="./index.html">Home</a>
         </div>
       </div>
     </nav>
 
     <div class="container-fluid" style="padding: 0">
       <div id="imageparallax">
-            <div class="pDiv"><div class="col-4" id="posterDiv"></div></div>
+        <div class="pDiv"><div class="col-4" id="posterDiv"></div></div>
       </div>
 
       <div class="row m-3 mx-auto">
+        <div class="col-3 mx-4"></div>
 
-        <div class = "col-3 mx-4"></div>
-        
-            <div class="col-sm-4">
-                    <h1 class=" " id="title"></h1>
-          
-                    <h4 class="" id="tag_line"></h4>
-                
-                    <div id = "genreDiv">
+        <div class="col-sm-4">
+          <h1 class=" " id="title"></h1>
 
-                    </div>
-          
-                  </div>
+          <h4 class="" id="tag_line"></h4>
+
+          <div id="genreDiv"></div>
+        </div>
 
         <div id="vl"></div>
 
-        
-
-        <div id="overviewDiv" class = "col-sm"></div>
-
+        <div id="overviewDiv" class="col-sm"></div>
       </div>
 
-      <div id="similar_tv_shows" class = "p-4">
+      <div id="similar_tv_shows" class="p-4">
         <div class="row m-2 mx-auto">
           <h2 class="">Similar Shows</h2>
         </div>
@@ -71,7 +60,6 @@
 
         <div class="row mx-auto mt-3" id="similar_tv_shows_small"></div>
       </div>
-
     </div>
 
     <script src="js/jquery.js"></script>

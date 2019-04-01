@@ -1,28 +1,4 @@
 $(() => {
-  const API_KEY = "";
-  const MAIN_URL = "https://api.themoviedb.org/3/";
-
-  const NOW_PLAYING_MOVIES_URL =
-    MAIN_URL + "movie/now_playing?api_key=" + API_KEY + "&language=en-US";
-
-  const POPULAR_MOVIES_URL =
-    MAIN_URL + "movie/popular?api_key=" + API_KEY + "&language=en-US";
-
-  const TOP_RATED_MOVIES_URL =
-    MAIN_URL + "movie/top_rated?api_key=" + API_KEY + "&language=en-US";
-
-  const UPCOMING_MOVIES_URL =
-    MAIN_URL + "movie/upcoming?api_key=" + API_KEY + "&language=en-US";
-
-  const AIRING_TODAY_TV_SHOWS_URL =
-    MAIN_URL + "tv/airing_today?api_key=" + API_KEY;
-
-  const ON_THE_AIR_TV_SHOWS_URL = MAIN_URL + "tv/on_the_air?api_key=" + API_KEY;
-
-  const POPULAR_TV_SHOWS_URL = MAIN_URL + "tv/popular?api_key=" + API_KEY;
-
-  const TOP_RATED_TV_SHOWS_URL = MAIN_URL + "tv/top_rated?api_key=" + API_KEY;
-
   // let now_playing_movies_large_div = $("#now_playing_movies_large");
 
   // let now_playing_movies_small_div = $("#now_playing_movies_small");
@@ -55,7 +31,7 @@ $(() => {
 
   let top_rated_tv_shows_small_div = $("#top_rated_tv_shows_small");
 
-  $.get(NOW_PLAYING_MOVIES_URL, data => {
+  $.get("/api/movies/nowplaying", data => {
     let results = data.results;
 
     now_playing_carousel.append(
@@ -145,7 +121,7 @@ $(() => {
     // }
   });
 
-  $.get(POPULAR_MOVIES_URL, data => {
+  $.get("/api/movies/popular", data => {
     let results = data.results;
 
     let i = 0;
@@ -187,7 +163,7 @@ $(() => {
     }
   });
 
-  $.get(TOP_RATED_MOVIES_URL, data => {
+  $.get("/api/movies/toprated", data => {
     let results = data.results;
 
     let i = 0;
@@ -229,7 +205,7 @@ $(() => {
     }
   });
 
-  $.get(UPCOMING_MOVIES_URL, data => {
+  $.get("/api/movies/upcoming", data => {
     let results = data.results;
 
     let i = 0;
@@ -271,7 +247,7 @@ $(() => {
     }
   });
 
-  $.get(AIRING_TODAY_TV_SHOWS_URL, data => {
+  $.get("/api/tvshows/airingtoday", data => {
     let results = data.results;
 
     airing_today_carousel.append(
@@ -337,7 +313,7 @@ $(() => {
     );
   });
 
-  $.get(ON_THE_AIR_TV_SHOWS_URL, data => {
+  $.get("/api/tvshows/ontheair", data => {
     let results = data.results;
 
     let i = 0;
@@ -379,7 +355,7 @@ $(() => {
     }
   });
 
-  $.get(POPULAR_TV_SHOWS_URL, data => {
+  $.get("/api/tvshows/popular", data => {
     let results = data.results;
 
     let i = 0;
@@ -421,7 +397,7 @@ $(() => {
     }
   });
 
-  $.get(TOP_RATED_TV_SHOWS_URL, data => {
+  $.get("/api/tvshows/toprated", data => {
     let results = data.results;
 
     let i = 0;

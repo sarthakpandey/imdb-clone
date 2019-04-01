@@ -1,19 +1,11 @@
 $(() => {
-  const API_KEY = "";
-  const MAIN_URL = "https://api.themoviedb.org/3/";
-
   let queryString = decodeURIComponent(window.location.search).substring(1);
 
   let movie_id = queryString.split("=")[1];
 
-  const MOVIE_URL = MAIN_URL + "movie/" + movie_id + "?api_key=" + API_KEY;
-
-  const SIMILAR_MOVIE_URL =
-    MAIN_URL + "movie/" + movie_id + "/similar" + "?api_key=" + API_KEY;
-
   let imageparallax = $("#imageparallax");
 
-  $.get(MOVIE_URL, data => {
+  $.get(`/api/movies/${movie_id}`, data => {
     let result = data;
 
     let backdrop_path =
@@ -48,13 +40,11 @@ $(() => {
       );
     }
 
-    loadSimilar();
+    loadSimilar(movie_id);
   });
 
-  function loadSimilar() {
-    console.log("loading similar");
-
-    $.get(SIMILAR_MOVIE_URL, data => {
+  function loadSimilar(movie_id) {
+    $.get(`/api/movies/similar/${movie_id}`, data => {
       let results = data.results;
 
       let i = 0;

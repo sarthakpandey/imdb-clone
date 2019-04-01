@@ -1,21 +1,11 @@
 $(() => {
-    const API_KEY = "";
-    const MAIN_URL = "https://api.themoviedb.org/3/";
-  
+      
     let queryString = decodeURIComponent(window.location.search).substring(1);
   
     let tv_id = queryString.split("=")[1];
-  
-    const TV_SHOW_URL = MAIN_URL + "tv/" + tv_id + "?api_key=" + API_KEY;
-  
-    const SIMILAR_TV_SHOW_URL =
-      MAIN_URL + "tv/" + tv_id + "/similar" + "?api_key=" + API_KEY;
-  
     let imageparallax = $("#imageparallax");
-
-    console.log(SIMILAR_TV_SHOW_URL);
   
-    $.get(TV_SHOW_URL, data => {
+    $.get(`/api/tvshows/${tv_id}`, data => {
       let result = data;
   
       let backdrop_path =
@@ -50,13 +40,14 @@ $(() => {
         );
       }
   
-      loadSimilar();
+      loadSimilar(tv_id);
+
+
     });
   
-    function loadSimilar() {
-      console.log("loading similar");
-  
-      $.get(SIMILAR_TV_SHOW_URL, data => {
+    function loadSimilar(tv_id) {
+
+      $.get(`/api/tvshows/similar/${tv_id}`, data => {
         let results = data.results;
     
         let i = 0;
