@@ -91,7 +91,7 @@ $(() => {
     }
   
     function createCardDiv1(imageUrl, title, overview, rating) {
-      return $(`<div class= "col myDiv" style = "white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer;">
+      return $(`<div class= "col-12 col-md myDiv" style = "white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer;">
             
       <div class="card cardDiv1 text-white shadow-lg" >
           <img
